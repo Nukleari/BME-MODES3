@@ -12,6 +12,8 @@ var locomotives = new Map();
 
 var segment_index = 0;
 
+var added_trains_cookie = [];
+
 function updateSegmentStateCallback(segmentState) {
     window.segments[segmentState.segmentID].setSegmentState(segmentState.state);
 }
@@ -78,13 +80,18 @@ $(document).ready(function () {
     new Map(window.settings.turnouts).forEach(function (value, key, map) {
         window.turnouts[key] = new TurnoutController(value, turnoutStateController, key);
     });
-
-    
+	
+	
+	
+    //ezt a gomb után kell majd, ha már kiválogattuk mi kell
+	
     // setup locomotive objects
-    var trainController = new TrainSpeedController();
-    new Map(window.settings.locomotives).forEach(function(value, key, map) {
-    	window.locomotives[key] = new LocomotiveController(value, trainController);
-    })
+//    var trainController = new TrainSpeedController();
+//    new Map(window.settings.locomotives).forEach(function(value, key, map) {
+//    	window.locomotives[key] = new LocomotiveController(value, trainController);
+//    })
+
+
 
     updateDOM();
     
@@ -106,6 +113,24 @@ $(document).ready(function () {
     	$('input[type="range"]').trigger('change');
     });
     
+	$("#train_added").bind('click', function(train_id) {
+		var d = new Date();
+		//lasts for 30 days
+		d.setTime(d.getTime() + (30*24*60*60*1000));
+		var expires = "expires="+ d.toUTCString();
+    	document.cookie = train_id +";" + expires + ";path=/";
+    });
+	
+	
+	//for popup window
+	// function toggle_visibility(id) {
+       // var e = document.getElementById(id);
+       // if(e.style.display == 'block')
+          // e.style.display = 'none';
+       // else
+          // e.style.display = 'block';
+    // }
+	
 //    $("#test").bind('click', function() {
 //    	window.locomotives[9].setSpeed(10);
 //    });

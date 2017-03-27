@@ -1,11 +1,11 @@
 package hu.bme.mit.inf.modes3.components.occupancyquery.main
 
 import hu.bme.mit.inf.modes3.components.occupancyquery.SectionOccupancyQueryComponent
-import hu.bme.mit.inf.modes3.components.occupancyquery.UARTReader
 import hu.bme.mit.inf.modes3.components.util.jopt.ArgumentDescriptorWithParameter
 import hu.bme.mit.inf.modes3.components.util.jopt.ArgumentRegistry
 import hu.bme.mit.inf.modes3.messaging.communication.factory.CommunicationStackFactory
 import org.slf4j.impl.SimpleLoggerFactory
+import hu.bme.mit.inf.modes3.components.occupancyquery.FakeOccupancyReader
 
 class Main {
 
@@ -20,7 +20,7 @@ class Main {
 		registry.registerArgumentWithOptions(new ArgumentDescriptorWithParameter("repPort", "The reply port for the component", Integer))
 		registry.parseArguments(args)
 
-		val reader = new UARTReader(loggerFactory)
+		val reader = new FakeOccupancyReader()
 		val readerThread = new Thread(reader)
 		readerThread.start
 

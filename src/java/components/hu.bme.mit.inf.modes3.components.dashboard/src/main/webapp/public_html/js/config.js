@@ -278,24 +278,85 @@ var settings = {
 		"t06", "t06-div", "t06-str"
 	],
 	locomotives : [
+	
+	//ide sok vonat
 		[ 9, {
 			name : "Taurus MÁV 1047",
 			address : 9,
 			image : "taurus-mav-1047.jpg",
 			svgGroup : "taurus",
 		}],
+		
 		[ 10, {
 			name : "SNCF 68000",
 			address : 10,
 			image : "sncf-68000.jpg",
 			svgGroup : 2,
 		}],
-	//        {
-	//            name: "BR-204",
-	//            address: 2,
-	//            image: "br-204.jpg",
-	//            svgGroup: 3
-	//        }
+		
+		[ 11, {
+	        name: "BR-204",
+	        address: 11,
+	        image: "br-204.jpg",
+	        svgGroup: 3
+	    }],
+		
+		[ 12, {
+			name : "NOHAB MÁV M61",
+			address : 12,
+			image : "nohab.jpg",
+			svgGroup : "nohab",
+		}],
+		
+		[ 13, {
+			name : "Desiro MÁV-START 416",
+			address : 13,
+			image : "desirohosszu.jpg",
+			svgGroup : "desiro1",
+		}],
+		
+		[ 14, {
+			name : "Siemens Desiro",
+			address : 14,
+			image : "vagottdesiro.jpg",
+			svgGroup : "desiro2",
+		}],
+		[ 15, {
+			name : "MÁV V43",
+			address : 15,
+			image : "szili.jpg",
+			svgGroup : "szili",
+		}],
+		[ 16, {
+			name : "NOHAB MÁV M61",
+			address : 16,
+			image : "nohab.jpg",
+			svgGroup : "taurus",
+		}],
+		[ 17, {
+			name : "NOHAB MÁV M61",
+			address : 17,
+			image : "nohab.jpg",
+			svgGroup : "taurus",
+		}],
+		[ 18, {
+			name : "NOHAB MÁV M61",
+			address : 18,
+			image : "nohab.jpg",
+			svgGroup : "taurus",
+		}],
+		[ 19, {
+			name : "NOHAB MÁV M61",
+			address : 19,
+			image : "nohab.jpg",
+			svgGroup : "taurus",
+		}],
+		[ 20, {
+			name : "NOHAB MÁV M61",
+			address : 20,
+			image : "nohab.jpg",
+			svgGroup : "taurus",
+		}]
 	],
 	locomotiveArrowStyle : 'color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#1e2141;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:21.25984192;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate',
 	locomotiveCircleStyle : 'color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#1e2141;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:31.88976288;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate',

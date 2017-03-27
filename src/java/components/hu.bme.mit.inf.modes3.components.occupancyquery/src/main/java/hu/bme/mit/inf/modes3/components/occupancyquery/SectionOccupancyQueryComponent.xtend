@@ -13,10 +13,10 @@ class SectionOccupancyQueryComponent extends AbstractRailRoadCommunicationCompon
 //	Map<Integer, SegmentOccupancy> stateCache = new TreeMap
 	Map<Integer, Integer> occupiedFor = new HashMap
 	Map<Integer, Integer> freeFor = new HashMap
-	IUARTReader reader
+	FakeOccupancyReader reader
 	val threshold = 2
 
-	new(CommunicationStack stack, IUARTReader reader, ILoggerFactory factory) {
+	new(CommunicationStack stack, FakeOccupancyReader reader, ILoggerFactory factory) {
 		super(stack, factory)
 		this.reader = reader
 	}
@@ -28,7 +28,7 @@ class SectionOccupancyQueryComponent extends AbstractRailRoadCommunicationCompon
 	}
 
 	def process() {
-		val recievedMsg = readMsg // blocking wait so we won't burn the CPU
+		val recievedMsg = reader.read // blocking wait so we won't burn the CPU
 		val msgToSend = parseMsg(recievedMsg)
 		sendMessage(msgToSend)
 	}
@@ -97,7 +97,5 @@ class SectionOccupancyQueryComponent extends AbstractRailRoadCommunicationCompon
 		return newMap
 	}
 
-	private def readMsg() {
-		reader.read
-	}
+	
 }

@@ -20,56 +20,58 @@ class PhysicalSegmentController {
 	 * currently, there is no PRU activity in control, therefore the application
 	 * processor need to act as an PRU also
 	 */
-	private Gpio appControl;
+//	private Gpio appControl;
 
-	private Gpio pruControl;
+//	private Gpio pruControl;
 
 	val Logger logger
+	SegmentState state = SegmentState.ENABLED;
 
 	new(ExpanderConfigInterpreter pinout, String expander, ILoggerFactory factory) {
 		logger = factory.getLogger(PhysicalSegmentController.name);
-		val String[] pins = pinout.getHeaderPins(expander);
-		try {
-			appControl = GpioManager.getGpio(pins.get(0), Gpio.Direction.OUT);
-			pruControl = GpioManager.getGpio(pins.get(1), Gpio.Direction.OUT);
-			
-			appControl.level = Gpio.Level.LOW;
-			pruControl.level = Gpio.Level.LOW;
-
-		}catch(GpioNotConfiguratedException ex) {
-			// TODO this exception should be handled correctly!
-			logger.debug("GPIO pin could not be setted!", ex);
-		}
+//		val String[] pins = pinout.getHeaderPins(expander);
+//		try {
+//			appControl = GpioManager.getGpio(pins.get(0), Gpio.Direction.OUT);
+//			pruControl = GpioManager.getGpio(pins.get(1), Gpio.Direction.OUT);
+//			
+//			appControl.level = Gpio.Level.LOW;
+//			pruControl.level = Gpio.Level.LOW;
+//
+//		}catch(GpioNotConfiguratedException ex) {
+//			// TODO this exception should be handled correctly!
+//			logger.debug("GPIO pin could not be setted!", ex);
+//		}
 	}
 
 	def setSegmentState(SegmentState state) {
+		this.state = state;
 
-		try {
-			switch state {
-				case ENABLED: {
-					appControl.level = Gpio.Level.HIGH
-					pruControl.level = Gpio.Level.HIGH
-				}
-				case DISABLED: {
-					appControl.level = Gpio.Level.LOW
-					pruControl.level = Gpio.Level.LOW
-				}
-			}
-		} catch (Exception ex) {
-			// TODO this exception should be handled correctly!
-			logger.debug("Exception during segment state setting!", ex);
-		}
+//		try {
+//			switch state {
+//				case ENABLED: {
+//					appControl.level = Gpio.Level.HIGH
+//					pruControl.level = Gpio.Level.HIGH
+//				}
+//				case DISABLED: {
+//					appControl.level = Gpio.Level.LOW
+//					pruControl.level = Gpio.Level.LOW
+//				}
+//			}
+//		} catch (Exception ex) {
+//			// TODO this exception should be handled correctly!
+//			logger.debug("Exception during segment state setting!", ex);
+//		}
 	}
 
 	def getSegmentState() {
 
 		// segment is only enabled when all of these gpios are HIGH
-		if (appControl.level == Gpio.Level.HIGH && pruControl.level == Gpio.Level.HIGH) {
-			return SegmentState.ENABLED;
-		}
-
-		// otherwise the HW and gate will disable the segment
-		return SegmentState.DISABLED;
+//		if (appControl.level == Gpio.Level.HIGH && pruControl.level == Gpio.Level.HIGH) {
+//			return SegmentState.ENABLED;
+//		}
+//
+//		// otherwise the HW and gate will disable the segment
+		return state;
 	}
 
 }

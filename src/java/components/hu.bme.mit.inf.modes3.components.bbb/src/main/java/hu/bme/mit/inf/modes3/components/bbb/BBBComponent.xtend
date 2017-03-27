@@ -15,14 +15,16 @@ import hu.bme.mit.inf.modes3.messaging.communication.update.IAllStatusUpdateList
 import java.util.HashMap
 import java.util.List
 import org.slf4j.ILoggerFactory
+import org.eclipse.xtend.lib.annotations.Accessors
 
 class BBBComponent extends AbstractRailRoadCommunicationComponent implements ISegmentCommandListener, ITurnoutCommandListener, PhysicalTurnoutController.ITurnoutStateChangedListener {
 
 	Configuration config
 	val int id
-
+	@Accessors(PUBLIC_GETTER, PRIVATE_SETTER)
 	private HashMap<Integer, PhysicalSegmentController> segmentControllers = newHashMap()
 
+	@Accessors(PUBLIC_GETTER, PRIVATE_SETTER)
 	private List<PhysicalTurnoutController> turnoutControllers = newArrayList()
 
 	Object turnoutStateChangedBarrier = new Object();
