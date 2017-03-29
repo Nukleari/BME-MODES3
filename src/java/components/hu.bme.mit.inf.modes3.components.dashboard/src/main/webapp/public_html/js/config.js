@@ -284,6 +284,7 @@ var settings = {
 			name : "Taurus MÁV 1047",
 			address : 9,
 			image : "taurus-mav-1047.jpg",
+			preview: "",
 			svgGroup : "taurus",
 		}],
 		
@@ -291,6 +292,7 @@ var settings = {
 			name : "SNCF 68000",
 			address : 10,
 			image : "sncf-68000.jpg",
+			preview: "",
 			svgGroup : 2,
 		}],
 		
