@@ -158,10 +158,23 @@ $(document).ready(function () {
     	
     	// 2. add all train with DOM
     	for(var i=9; i<20; ++i) {
+			
+			var locoObject = new Map(window.settings.locomotives).get(i);
+			console.log(locoObject);
+			
+			var urlstr= "background-image: url('/images/locomotives/";
+			var prev = locoObject.preview;
+			var res = urlstr.concat(prev);
+			var urlres = res.concat("')");
+			console.log(urlres);
+			
     		var div = $('<div />').addClass('train-list-item');
-    		var header = $('<h3/>').text(i);
-    		var input = $("<input />").attr('type', 'hidden').attr('name', 'train-id').val(i);
-    		div.append(header);
+    		var header = $('<h3/>').text(locoObject.name);
+    		var imageholder = $('<div />').addClass('train-image-holder').attr('style', urlres);
+			var input = $("<input />").attr('type', 'hidden').attr('name', 'train-id').val(i);
+    		
+			div.append(header);
+			div.append(imageholder);
     		div.append(input);
     		
     		if( locomotiveList.indexOf(i) !== -1 ) {
