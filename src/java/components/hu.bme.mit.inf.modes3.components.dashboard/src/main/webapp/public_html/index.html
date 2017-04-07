@@ -6,6 +6,7 @@
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
 <script type="text/javascript" src="js/jquery.svgstyle.min.js"></script>
@@ -959,14 +960,19 @@ SVG CONTENT ENDS HERE
 				<div id="train-control">
 					<div style="background-color: #1e2141; padding: 12px">
 						<h2>Layout Controls</h2>
-						
-	<input type="button" title="Set all segment enabled"
-		id="control-all-segment" />
-	<input type="button" title="Set all turnout to straight"
-		id="control-all-turnout" />
-	<input type="button" title="Stop all train" id="stop-all-train" />
+		
+	<button type="button" title="Set all segment enabled" id="controll-all-segment"><i class="material-icons md-dark md-36">done_all</i></button>
+	<button type="button" title="Set all turnout to straight" id="control-all-turnout"><i class="material-icons md-dark md-36">call_split</i></button>
+	<button type="button" title="Stop all train" id="stop-all-train"><i class="material-icons md-dark md-36">pan_tool</i></button>
+	<button type="button" title="Add train" id="add-train"><i class="material-icons md-dark md-36">train</i></button>
+				
+<!-- 	<input type="button" title="Set all segment enabled" -->
+<!-- 		id="control-all-segment" />  -->
+<!-- 	<input type="button" title="Set all turnout to straight" -->
+<!-- 		id="control-all-turnout" /> -->
+<!-- 	<input type="button" title="Stop all train" id="stop-all-train" /> -->
 
-	<input type="button" title="Add train" id="add-train" />
+<!-- 	<input type="button" title="Add train" id="add-train" /> -->
 	</div>
 	</div>
 	</div>
@@ -1004,21 +1010,21 @@ SVG CONTENT ENDS HERE
 							<div class="train-image-holder"
 								style="background-image: url('/images/locomotives/nohab-preview.jpg')">
 							</div>
-							<input type="hidden" name="train-id" value="3" />
+							<input type="hidden" name="train-id" value="11" />
 						</div>
 						<div class="train-list-item added">
 							<h3>NOHAB MÁV M61</h3>
 							<div class="train-image-holder"
 								style="background-image: url('/images/locomotives/nohab-preview.jpg')">
 							</div>
-							<input type="hidden" name="train-id" value="4" />
+							<input type="hidden" name="train-id" value="12" />
 						</div>
 						<div class="train-list-item">
 							<h3>NOHAB MÁV M61</h3>
 							<div class="train-image-holder"
 								style="background-image: url('/images/locomotives/nohab-preview.jpg')">
 							</div>
-							<input type="hidden" name="train-id" value="5" />
+							<input type="hidden" name="train-id" value="13" />
 						</div>
 
 					</div>
@@ -1032,6 +1038,7 @@ SVG CONTENT ENDS HERE
 				</div>
 			</div>
 		</div>
+	
 	</div>
 
 </body>

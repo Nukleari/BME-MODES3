@@ -157,7 +157,7 @@ $(document).ready(function () {
     	$("#train-list").empty();
     	
     	// 2. add all train with DOM
-    	for(var i=0; i<10; ++i) {
+    	for(var i=9; i<20; ++i) {
     		var div = $('<div />').addClass('train-list-item');
     		var header = $('<h3/>').text(i);
     		var input = $("<input />").attr('type', 'hidden').attr('name', 'train-id').val(i);
@@ -200,7 +200,7 @@ $(document).ready(function () {
     	var newId = parseInt($('#add-train-dialog .train-list-item.selected > input').val());
     	
     	locomotiveList.push(newId);
-    	//setCookie(cookie_locomotives, locomotiveList.toString(), 365);
+    	setCookie(cookie_locomotives, locomotiveList.toString(), 365);
     	
     	// get locomotive with new ID from setup array and insert it into the list next to them
     	var locoObject = new Map(window.settings.locomotives).get(newId);

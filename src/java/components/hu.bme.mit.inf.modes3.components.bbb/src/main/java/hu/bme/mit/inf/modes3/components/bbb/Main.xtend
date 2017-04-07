@@ -30,10 +30,13 @@ class Main {
 
 		val communicationStack = CommunicationStackFactory::createMQTTStack(registry, loggerFactory)
 		val list = new ArrayList<BBBComponent>();
+		
 
 		for (var int i = 1; i < 7; i++) {
 			list.add(new BBBComponent(i, communicationStack, loggerFactory));
 		}
+
+		Thread.sleep(2000)
 
 		// set all segment to disabled
 		for (BBBComponent bb : list) {
@@ -42,7 +45,7 @@ class Main {
 			}
 		}
 
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 
 		// set all segment to enabled
 		for (BBBComponent bb : list) {
@@ -54,13 +57,13 @@ class Main {
 
 		Thread.sleep(1000);
 
-		// set all segment to disabled
+/*/		// set all segment to disabled
 		for (BBBComponent bb : list) {
 			for (int segmentID : bb.segmentControllers.keySet) {
 				bb.onSegmentCommand(segmentID, SegmentState.DISABLED);
 				Thread.sleep(100);
 			}
-		}
+		} */
 	}
 
 }
