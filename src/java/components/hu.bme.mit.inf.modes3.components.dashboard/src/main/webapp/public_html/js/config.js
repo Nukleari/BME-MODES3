@@ -305,7 +305,7 @@ var settings = {
 	    }],
 		
 		[ 12, {
-			name : "NOHAB MÁV M61 1",
+			name : "NOHAB MÁV M61 #1",
 			address : 12,
 			image : "nohab.jpg",
 			preview: "nohab-preview.jpg",
@@ -313,57 +313,59 @@ var settings = {
 		}],
 		
 		[ 13, {
-			name : "NOHAB MÁV M61 2",
-			address : 12,
-			image : "nohab.jpg",
-			preview: "nohab-preview.jpg",
-			svgGroup : "nohab",
-		}],
-		
-		[ 14, {
 			name : "Siemens Desiro",
 			address : 14,
 			image : "vagottdesiro.jpg",
 			preview: "desiro-preview.jpg",
 			svgGroup : "desiro2",
 		}],
-		[ 15, {
+		
+		[ 14, {
 			name : "MÁV V43",
 			address : 15,
 			image : "szili.jpg",
 			preview: "szili-preview.jpg",
 			svgGroup : "szili",
 		}],
+		
+		[ 15, {
+			name : "NOHAB MÁV M61 #2",
+			address : 12,
+			image : "nohab.jpg",
+			preview: "nohab-preview.jpg",
+			svgGroup : "nohab",
+		}],
+		
 		[ 16, {
-			name : "NOHAB MÁV M61 3",
+			name : "NOHAB MÁV M61 #3",
 			address : 16,
 			image : "nohab.jpg",
 			preview: "nohab-preview.jpg",
 			svgGroup : "nohab",
 		}],
 		[ 17, {
-			name : "NOHAB MÁV M61 4",
+			name : "NOHAB MÁV M61 #4",
 			address : 17,
 			image : "nohab.jpg",
 			preview: "nohab-preview.jpg",
 			svgGroup : "nohab",
 		}],
 		[ 18, {
-			name : "NOHAB MÁV M61 5",
+			name : "NOHAB MÁV M61 #5",
 			address : 18,
 			image : "nohab.jpg",
 			preview: "nohab-preview.jpg",
 			svgGroup : "nohab",
 		}],
 		[ 19, {
-			name : "NOHAB MÁV M61 6",
+			name : "NOHAB MÁV M61 #6",
 			address : 19,
 			image : "nohab.jpg",
 			preview: "nohab-preview.jpg",
 			svgGroup : "nohab",
 		}],
 		[ 20, {
-			name : "NOHAB MÁV M61 7",
+			name : "NOHAB MÁV M61 #7",
 			address : 20,
 			image : "nohab.jpg",
 			preview: "nohab-preview.jpg",
