@@ -151,8 +151,6 @@ $(document).ready(function () {
     
     $("#add-train").bind('click', function() {
     	
-    	// TODO add all train from config file
-    	
     	// 1. clear train list container (#train-list)
     	$("#train-list").empty();
     	

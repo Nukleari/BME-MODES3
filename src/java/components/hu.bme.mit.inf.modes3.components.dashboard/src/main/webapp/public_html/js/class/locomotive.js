@@ -34,7 +34,9 @@ LocomotiveController.prototype.setSpeed = function (speed) {
 
 LocomotiveController.prototype.createDOMrepresentation = function () {
     var container = $('<div />').addClass('train-container').attr("id", "train-"+this.config.address);
-    var header = $('<h2 />').text(this.config.name);
+	var header = $('<h2 />').text(this.config.name);
+    // var header = $('<h2 />').attr('style', 'float: left').text(this.config.name);
+	// var removebtn = $('<span />').addClass('remove-train').attr('style', 'float:right; position: relative; top: 10px; right: 10px;').text('X');
     var image = $('<img />')
             .attr('src', 'images/locomotives/' + this.config.image);
     this.rangeInput = $('<input />').attr({
