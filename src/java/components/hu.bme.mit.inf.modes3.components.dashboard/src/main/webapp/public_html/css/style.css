@@ -1,4 +1,4 @@
-/* 
+/*
     Created on : Sep 12, 2016, 11:05:40 AM
     Author     : zsoltmazlo
 */
@@ -186,7 +186,7 @@ input[type="button"] {
 }
 
 /**
- * trains 
+ * trains
  */
 .train-container {
 	display: block;
@@ -267,7 +267,7 @@ input[type="button"] {
 
 /* Add Animation */
 @-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0} 
+    from {top:-300px; opacity:0}
     to {top:0; opacity:1}
 }
 
@@ -424,7 +424,7 @@ input[type="button"] {
 #train-list .train-list-item {
 	background-color: #DDD;
 	display: inline-block;
-	width: 225px;
+	width: 230px;
 	margin: 16px 8px;
 	float: left;
 	transition: 0.4s all;
@@ -493,7 +493,7 @@ button {
 
 button > i.material-icons.md-36 {
    display: inline-block;
-    font-size: 32px;   
+    font-size: 32px;
 }
 
 button#stop-all-train {
@@ -502,7 +502,38 @@ button#stop-all-train {
 }
 
 button#stop-all-train i {
-    font-size: 26px;   
+    font-size: 26px;
    margin-top: 6px;
    margin-bottom: 12px;
 }
+
+
+
+.remove-train:hover {
+	opacity:1;
+
+}
+
+.remove-train {
+	visibility: visible;
+	opacity:.2;
+	position: fixed;
+	z-index: 2;
+	right: 29px;
+	font:bold;
+	color:red;
+	font-family: cursive;
+
+/*.remove-train {
+		visibility:hidden;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.remove-train:hover,
+.remove-train:focus {
+    color: #ff0000;
+    text-decoration: none;
+    cursor: pointer;
+}*/
