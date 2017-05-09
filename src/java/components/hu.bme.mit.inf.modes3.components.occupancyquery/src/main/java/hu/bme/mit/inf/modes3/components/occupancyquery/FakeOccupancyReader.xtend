@@ -24,7 +24,7 @@ class FakeOccupancyReader implements Runnable {
 		// Create a 4 byte array, shift a single 1 from index 0 to index 31 every 1 sec
 		while(true){
 			Thread.sleep(1000)		
-			ByteArrayHelper.shift()
+			ByteArrayHelper.shiftint()
 			read()
 			
 			}
