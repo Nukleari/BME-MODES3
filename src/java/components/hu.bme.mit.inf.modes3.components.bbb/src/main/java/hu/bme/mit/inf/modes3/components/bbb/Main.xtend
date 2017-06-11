@@ -6,6 +6,7 @@ import hu.bme.mit.inf.modes3.messaging.communication.enums.SegmentState
 import hu.bme.mit.inf.modes3.messaging.communication.factory.CommunicationStackFactory
 import java.util.ArrayList
 import org.slf4j.impl.SimpleLoggerFactory
+import hu.bme.mit.inf.modes3.messaging.communication.enums.TurnoutState
 
 class Main {
 
@@ -33,18 +34,29 @@ class Main {
 		
 
 		for (var int i = 1; i < 7; i++) {
-			list.add(new BBBComponent(i, communicationStack, loggerFactory));
+			list.add(new BBBComponent(i, communicationStack, loggerFactory))
 		}
 
 		Thread.sleep(2000)
-
+		
+		list.get(1).onTurnoutCommand(0, TurnoutState.DIVERGENT)
+		
+		FileHelper.fileReader(list)
+		
+		
+		
+		
+		
 		// set all segment to disabled
-		for (BBBComponent bb : list) {
+		/*for (BBBComponent bb : list) {
 			for (int segmentID : bb.segmentControllers.keySet) {
 				bb.onSegmentCommand(segmentID, SegmentState.DISABLED);
+				print(segmentID)
 			}
 		}
-
+		
+		*/
+		/*
 		Thread.sleep(2000);
 
 		// set all segment to enabled
@@ -56,14 +68,15 @@ class Main {
 		}
 
 		Thread.sleep(1000);
+		*/
 
-/*/		// set all segment to disabled
-		for (BBBComponent bb : list) {
-			for (int segmentID : bb.segmentControllers.keySet) {
-				bb.onSegmentCommand(segmentID, SegmentState.DISABLED);
-				Thread.sleep(100);
-			}
-		} */
+//		// set all segment to disabled
+//		for (BBBComponent bb : list) {
+//			for (int segmentID : bb.segmentControllers.keySet) {
+//				bb.onSegmentCommand(segmentID, SegmentState.DISABLED);
+//				Thread.sleep(100);
+//			}
+//		} 
 	}
 
 }

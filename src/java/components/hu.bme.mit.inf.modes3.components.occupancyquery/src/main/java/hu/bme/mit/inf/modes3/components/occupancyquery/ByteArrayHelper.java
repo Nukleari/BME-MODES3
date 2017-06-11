@@ -96,44 +96,6 @@ public class ByteArrayHelper {
 		
 		return bytes;
 	}
-		
-		
-//		
-//		System.out.println(bytes.length);
-//		byte[] c = null;
-//		for(int i= 0; i< bytes.length; i++){
-//		
-//		//	start[i] << 1;
-//		
-//			byte b = bytes[i];
-//			b = (byte) (b << 1);
-//			c[i] = b;
-//		}		
-//		for (byte b : c) {
-//	    System.out.print(String.format("%x", b));
-//	}
-//		return c;
-		
-		
-		
-		
-		
-//		
-////			byte[] barray = read();
-//////			for (byte b : barray) {
-//////			    System.out.print(String.format("%x", b));
-//////			}
-////			BigInteger bigInt = new BigInteger(barray);
-////
-////			// shift
-////			BigInteger shiftInt = bigInt.shiftRight(4);
-////			
-////			// back to array
-////			 byte[] shifted = shiftInt.toByteArray();
-////			 for (byte b : shifted) {
-////				    System.out.print(String.format("%x", b));
-////				}
-////			return shifted;
 	
 	}
 	
