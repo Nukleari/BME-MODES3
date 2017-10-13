@@ -117,13 +117,13 @@ while(True):
         print x + (w/2), y + (h/2)
         if(x + (w/2) > 75 and x + (w/2) < 85 and y + (h/2) > 50 and y + (h/2) < 90):
             found = True
-            direction = "straight"
+            direction = "stra"
         elif(x + (w/2) > 40 and x + (w/2) < 76 and y + (h/2) > 50 and y + (h/2) < 100):
             found = True
             direction = "left"
         elif(x + (w/2) > 84 and x + (w/2) < 120 and y + (h/2) > 50 and y + (h/2) < 100):
             found = True
-            direction = "right"
+            direction = "righ"
 
     if(found):
         notFound = 0

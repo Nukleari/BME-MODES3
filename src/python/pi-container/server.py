@@ -42,15 +42,15 @@ lastframetime = time.time()
 
 def signdata(conn):
 	while(True):
-		direction = conn.recv(8)
+		direction = recvall(conn, 4)
 		if(direction != None):
 			if(direction == "stop"):
 				cv2.imshow("Sign",stop)
-			if(direction == "straight"):
+			if(direction == "stra"):
 				cv2.imshow("Sign",straight)
 			if(direction == "left"):
 				cv2.imshow("Sign",left)
-			if(direction == "right"):
+			if(direction == "righ"):
 				cv2.imshow("Sign",right)
 
 thread.start_new_thread (signdata, (conn2,))
